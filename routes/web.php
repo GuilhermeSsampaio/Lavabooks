@@ -22,4 +22,12 @@ Route::get('/editar', [\App\Http\Controllers\EditarController::class, 'editar'])
 
 Route::get('/deletar',  [\App\Http\Controllers\DeletarController::class, 'deletar'])->name('site.deletar');
 
+Route::get('/sobre',  [\App\Http\Controllers\SobreController::class, 'sobre'])->name('site.sobre');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
