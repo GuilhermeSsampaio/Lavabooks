@@ -54,9 +54,9 @@
         <div>
             <p>
                 Criação de um programa em python para o cálculo mensal da conta de energia e seu desconto de acordo com
-                a bandeira tarifária, fazendo o usode funções modulares–IC,UFGD (2022) </p>
+                a bandeira tarifária, fazendo o uso de funções modulares – IC,UFGD (2022) </p>
             <p>
-                Desenvolvimento de um portal de notícias para a AgetranEstágio, IFMS (2022) <p>
+                Desenvolvimento de um portal de notícias para a Agetran - Estágio, IFMS (2022) <p>
 
         </div>
 

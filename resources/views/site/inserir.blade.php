@@ -3,9 +3,14 @@
 @section('titulo', 'Inserir')
 
 @section('menu')
-
-    <h1>View de inserções</h1>
-
-
+<div>
+    @section('botao', 'Salvar')
+    @section('operacao', 'Insira')
+  @if(isset($msg))
+        <script>
+            alert("{{$msg}}");
+        </script>
+    @endif
+    @include('site.layouts._partials.form')
+</div>
 @endsection
-

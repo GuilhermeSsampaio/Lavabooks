@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Livro;
 
 class HomeController extends Controller
 {
+    public $objLivro;
     /**
      * Create a new controller instance.
      *
@@ -14,6 +16,9 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        //$this->objLivro=new Livro();
+
     }
 
     /**
@@ -23,10 +28,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $livros = Livro::all();
+        return view('home')->with('livros', $livros);
     }
     public function home(){
-        return view('home');
+    //  $livros = Livro::all();
+    //    return view('home')->with('livros', $livros);
 
     }
+    // public function ver($id){
+    //     $livro = Livro::findOrFail($id);
+    //     return view('ver')->with('livros', $livro);
+    // }
 }

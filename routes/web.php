@@ -14,18 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('site.home');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('site.home');
+
+Route::get('/ver/{id}', [\App\Http\Controllers\VerController::class, 'show'])->name('site.ver');
+
 
 Route::get('/inserir', [\App\Http\Controllers\InserirController::class, 'inserir'])->name('site.inserir');
+Route::post('/inserir', [\App\Http\Controllers\InserirController::class, 'inserir'])->name('site.inserir');
 
-Route::get('/editar', [\App\Http\Controllers\EditarController::class, 'editar'])->name('site.editar');
+Route::get('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'update'])->name('site.editar');
 
-Route::get('/deletar',  [\App\Http\Controllers\DeletarController::class, 'deletar'])->name('site.deletar');
+Route::post('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'update'])->name('site.editar');
+
+Route::get('/deletar/{id}',  [\App\Http\Controllers\DeletarController::class, 'deletar'])->name('site.deletar');
+Route::delete('/deletar/{id}', [\App\Http\Controllers\EditarController::class, 'deletar'])->name('site.deletar');
+
 
 Route::get('/sobre',  [\App\Http\Controllers\SobreController::class, 'sobre'])->name('site.sobre');
-
-
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

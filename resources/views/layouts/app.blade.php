@@ -17,6 +17,7 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+@section('menu')
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -33,7 +34,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    {{-- <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -66,7 +67,7 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </nav>
