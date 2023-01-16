@@ -8,9 +8,9 @@
     @section('botao', 'Atualizar')
     @section('operacao', 'Atualize')
 <div class="d-flex justify-content-center container" >
-    <form method='post'>
+    <form method='post' action="{{ route('site.update', $livro->id) }}">
         @csrf
-        {{-- @method('PUT') --}}
+        @method('PUT')
         <label class='form-label'>@yield('operacao') seu livro</label>
         <div>
             <input name='nome' type='text' value='{{$livro->livro}}' placeholder='Nome do livro'>

@@ -7,6 +7,13 @@ use App\Models\Livro;
 
 class EditarController extends Controller
 {
+    public function edit($id){
+        $livro = Livro::find($id);
+
+          print_r($livro->getAttributes());
+        return view('site.editar')->with('livro', $livro);
+    }
+
     public function update(Request $request, $id){
 
         $livro = Livro::find($id);
@@ -18,7 +25,8 @@ class EditarController extends Controller
         $livro->sinopse = $request->input('sinopse');
          print_r($livro->getAttributes());
         $livro->save();
-        return view('site.editar')->with('livro', $livro);
+        $livros = Livro::all();
+        return view('home')->with('livros', $livros)->with('livros', $livros)->with('msg', 'livro editado!');
         }
 
 }

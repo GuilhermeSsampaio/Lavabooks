@@ -9,7 +9,7 @@ class DeletarController extends Controller
     public function deletar($id){
         $livro = Livro::find($id);
 
-        // $livro->delete();
+        $livro->delete();
 
         $livros = Livro::all();
         return view('home')->with('livros', $livros);

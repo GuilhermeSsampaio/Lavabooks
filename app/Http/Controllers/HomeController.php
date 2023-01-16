@@ -30,6 +30,8 @@ class HomeController extends Controller
     {
         $livros = Livro::all();
         return view('home')->with('livros', $livros);
+
+
     }
     public function home(){
     //  $livros = Livro::all();

@@ -6,7 +6,13 @@ use Illuminate\Http\Request;
 use App\Models\Livro;
 
 class InserirController extends Controller
+
 {
+
+    public function create(){
+        return view('site.inserir');
+    }
+
     public function inserir(Request $request){
 
         // $this->validate($request,[
@@ -24,9 +30,11 @@ class InserirController extends Controller
         $livro->autor = $request->input('autor');
         $livro->sinopse = $request->input('sinopse');
 
+
        // print_r($livro->getAttributes());
         $livro->save();
         // $livro = Livro::all();
-        return view('/site.inserir');
+        $livros = Livro::all();
+        return view('home')->with('livros', $livros)->with('msg', 'livro cadastrado!');
     }
 }

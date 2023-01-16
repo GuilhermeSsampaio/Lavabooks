@@ -5,6 +5,7 @@
 @section('content')
 @section('menu')
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -58,9 +59,17 @@
         </div>
     </div>
 </div>
-<div class='m-5'>
-    <h1 class='container'>Lavabooks - catalogo de livros digital</h1>
-    <p class=' container'>Livros Cadastrados: {{ $livros->count() }}</p>
+<div class='m-5 container'>
+    @if(isset($msg))
+        <div class="card w-75 mb-3 d-flex justify-content-center container">
+            <p class='m-2 alert alert-success'>{{$msg}}</p>
+
+        @endif
+    <h1>Lavabooks - catalogo de livros digital</h1>
+    <p>Livros Cadastrados: {{ $livros->count() }}</p>
+
+
+     </div>
 </div>
 @foreach ($livros as $l )
 <div class="card w-75 mb-3 d-flex justify-content-center container">

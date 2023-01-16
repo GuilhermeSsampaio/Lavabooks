@@ -24,8 +24,8 @@
 
 </header>
 <hr>
-<section class='box'>
-    <div>
+<section class='box '>
+    <div class='hoverr'>
         <h2 class="uppercase azul-claro borda-secoes">Objetivos</h2>
         <p class="texto">Formado no IFMS campus Dourados, como técnico de informática para internet, e almejando cursar
             sistemas de informação na UFGD. Sou uma pessoa responsável e flexível e busco uma experiência no mercado de

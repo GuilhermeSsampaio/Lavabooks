@@ -19,12 +19,13 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('s
 Route::get('/ver/{id}', [\App\Http\Controllers\VerController::class, 'show'])->name('site.ver');
 
 
-Route::get('/inserir', [\App\Http\Controllers\InserirController::class, 'inserir'])->name('site.inserir');
+Route::get('/inserir', [\App\Http\Controllers\InserirController::class, 'create'])->name('site.inserir');
+
 Route::post('/inserir', [\App\Http\Controllers\InserirController::class, 'inserir'])->name('site.inserir');
 
-Route::get('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'update'])->name('site.editar');
+Route::get('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'edit'])->name('site.update');
 
-Route::post('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'update'])->name('site.editar');
+Route::put('/editar/{id}', [\App\Http\Controllers\EditarController::class, 'update'])->name('site.update');
 
 Route::get('/deletar/{id}',  [\App\Http\Controllers\DeletarController::class, 'deletar'])->name('site.deletar');
 Route::delete('/deletar/{id}', [\App\Http\Controllers\EditarController::class, 'deletar'])->name('site.deletar');
