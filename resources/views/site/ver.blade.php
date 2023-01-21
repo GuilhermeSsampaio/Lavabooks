@@ -9,8 +9,8 @@
         <h5 class="card-title">{{$livro->livro}}</h5>
         <p class="card-text">{{$livro->autor}}</p>
         <p class="card-text">{{$livro->sinopse}}</p>
-        <a href="ver/{{$livro->id}}" class="btn btn-primary">Ver mais</a>
-        <a href="editar/{{$livro->id}}" class="btn btn-primary">Editar</a>
+        <a href="/ver/{{$livro->id}}" class="btn btn-primary">Ver mais</a>
+        <a href="/editar/{{$livro->id}}" class="btn btn-primary">Editar</a>
         <a href="/deletar/{{$livro->id}}" class="btn btn-primary">Deletar</a>
 
     </div>

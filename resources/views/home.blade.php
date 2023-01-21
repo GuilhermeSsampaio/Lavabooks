@@ -77,8 +77,8 @@
         <h5 class="card-title">{{$l->livro}}</h5>
         <p class="card-text">{{$l->autor}}</p>
         <p class="card-text">{{$l->sinopse}}</p>
-        <a href="ver/{{$l->id}}" class="btn btn-primary">Ver mais</a>
-        <a href="editar/{{$l->id}}" class="btn btn-primary">Editar</a>
+        <a href="/ver/{{$l->id}}" class="btn btn-primary">Ver mais</a>
+        <a href="/editar/{{$l->id}}" class="btn btn-primary">Editar</a>
         <a href="/deletar/{{$l->id}}" class="btn btn-primary">Deletar</a>
 
     </div>
